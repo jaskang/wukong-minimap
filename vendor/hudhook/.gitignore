@@ -1,8 +1,0 @@
-.env
-Cargo.lock
-/target
-**/*.rs.bk
-
-.idea
-vkd3d-proton.cache*
-*.swp

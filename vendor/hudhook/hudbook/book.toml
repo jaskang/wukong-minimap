@@ -1,9 +1,0 @@
-[book]
-authors = ["Andrea Venuta"]
-language = "en"
-multilingual = false
-src = "src"
-title = "hudbook"
-
-[build]
-build-dir = "../target/hudbook"
