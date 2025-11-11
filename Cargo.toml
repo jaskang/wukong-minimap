@@ -7,32 +7,40 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-hudhook = { path = "vendor/hudhook", features = [
-  "dx12",
-], default-features = false }
-image = { version = "0.25.2", features = [
-  "jpeg",
-  "png",
-  "webp",
-], default-features = false }
-serde = { version = "1.0.210", features = ["derive"] }
-serde_json = "1.0.128"
-once_cell = "1.18"
-gilrs = { version = "0.11.0", features = ["xinput"], default-features = false }
-# 添加 tracing-subscriber
-tracing-subscriber = { version = "0.3.19", features = [
-  "time",
-  "local-time",
-  "chrono",
+# hudhook = { path = "vendor/hudhook", features = [
+#   "dx12",
+# ], default-features = false }
+# image = { version = "0.25.2", features = [
+#   "jpeg",
+#   "png",
+#   "webp",
+# ], default-features = false }
+# serde = { version = "1.0.210", features = ["derive"] }
+# serde_json = "1.0.128"
+# once_cell = "1.18"
+# gilrs = { version = "0.11.0", features = ["xinput"], default-features = false }
+# tracing-subscriber = { version = "0.3.19", features = [
+#   "time",
+#   "local-time",
+#   "chrono",
+# ] }
+# tracing-appender = { version = "0.2" }
+# time = { version = "0.3.41", features = [
+#   "formatting",
+#   "parsing",
+#   "macros",
+#   "std",
+#   "local-offset",
+# ] }
+# Windows API
+windows = { version = "0.58", features = [
+  "Win32_Foundation",
+  "Win32_System_LibraryLoader",
+  "Win32_System_Console",       # 用于创建控制台
 ] }
-# 添加 tracing-appender，用于文件输出
-tracing-appender = { version = "0.2" }
-time = { version = "0.3.41", features = [
-  "formatting",
-  "parsing",
-  "macros",
-  "std",
-  "local-offset",
-] }
+# 日志库
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tracing-appender = "0.2"
 
 [build-dependencies]

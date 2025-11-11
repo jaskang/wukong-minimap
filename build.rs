@@ -1,8 +1,9 @@
 // use std::{fs, path::Path};
 
 fn main() {
-    println!("cargo:rustc-link-lib=static=b1sdk");
-    println!("cargo:rustc-link-search=native=./target");
+    // 注释掉不需要的 b1sdk 链接
+    // println!("cargo:rustc-link-lib=static=b1sdk");
+    // println!("cargo:rustc-link-search=native=./target");
 
     // 获取输出目录环境变量
     // let out_dir = std::env::var("OUT_DIR").unwrap();
